@@ -1,4 +1,33 @@
 <html>
-  <head><title>Wountboard</title></head>
-  <body><h1>Hello</h1><p>Hello world!</p><p>This is a work-in-progress</p></body>
+  <head>
+    <title>Wountboard</title>
+    <link rel="icon" type="image/x-icon" href="assets/ico/wountboard.ico">
+    <style>
+      button.plays-audio {
+        background: light-grey;
+        width: 100%;
+      }
+    </style>
+    <script>
+      window.addEventListener( 'load', function() {
+        document.querySelectorAll( 'button.plays-audio' ).forEach( function(elem) {
+          console.log(elem);
+          elem.addEventListener( 'click', function(even) {
+            let audio = even.target.getAttribute( 'data-audio' );
+            if ( !audio ) {
+              return
+            }
+            console.log(audio);
+            audio = new Audio( 'assets/audio/' + audio );
+            audio.play();
+          })
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <p>Hello world!</p>
+    <p>This is a work-in-progress with an <button type="button" class="plays-audio" data-audio="test_sound.mp3">audio button</button> for testing.</p>
+  </body>
 </html>
