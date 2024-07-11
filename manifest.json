@@ -1,8 +1,9 @@
 {
 	"name": "Wountboard",
 	"short_name": "Wountboard",
-	"display": "standalone",
-	"start_url": "index.html",
+	"display": "fullscreen",
+	"start_url": "./index.html",
+	"background_color": "black",
 	"description": "A Wout Soundboard",
 	"icons": [
 		{
@@ -10,11 +11,11 @@
 			"sizes": "16x16 24x24 32x32 48x48 64x64 72x72 96x96 128x128 256x256"
 		},
 		{
-			"src": "/assets/ico/wountboard512.jpeg",
+			"src": "/assets/ico/wountboard512.png",
 			"sizes": "512x512"
 		},
 		{
-			"src": "/assets/ico/wountboard192.jpeg",
+			"src": "/assets/ico/wountboard192.png",
 			"sizes": "192x192"
 		}
 	]
