@@ -26,7 +26,6 @@
         width: 100%;
       }
       h1 {
-        float: left;
         margin-left: 0.5em;
       }
       @media (prefers-color-scheme: light) {
@@ -56,6 +55,7 @@
     </style>
     <script>
       window.addEventListener( 'load', function() {
+        document.getElementById('volume').value = localStorage.getItem('volume') || 1;
         document.querySelectorAll( '.plays-audio' ).forEach( function(elem) {
           elem.addEventListener( 'click', function(even) {
             let audio = even.target.getAttribute( 'data-audio' );
@@ -65,6 +65,9 @@
             audio = audio.split('|');
             audio = audio[ Math.floor( Math.random() * audio.length ) ];
             audio = new Audio( 'assets/audio/' + audio );
+            let volume = +document.getElementById('volume').value;
+            audio.volume = volume;
+            localStorage.setItem('volume', volume);
             audio.play();
           })
         });
@@ -87,7 +90,10 @@
     </script>
   </head>
   <body>
-  <header><h1 class="plays-audio" data-audio="Wout_remix.mp3">Wountboard</h1></header>
+    <header><h1 class="plays-audio" data-audio="Wout_remix.mp3">
+      <label>Master volume: <input type="range" name="volume" id="volume" min="0" max="1" step="0.01" value="1"></label>
+      Wountboard
+    </h1></header>
     <p><button class="plays-audio" data-audio="Ah_toe.mp3|Ah_toeee.mp3">
       AH TOEE
       <noscript>
