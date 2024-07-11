@@ -7,7 +7,7 @@
 	"description": "A Wout Soundboard",
 	"icons": [
 		{
-			"src": "./assets/ico/woutboard.ico",
+			"src": "./assets/ico/wountboard.ico",
 			"sizes": "16x16 24x24 32x32 48x48 64x64 72x72 96x96 128x128 256x256"
 		},
 		{
