@@ -1,9 +1,10 @@
 {
 	"name": "Wountboard",
 	"short_name": "Wountboard",
-	"display": "fullscreen",
-	"start_url": "./index.html",
+	"display": "standalone",
 	"background_color": "black",
+	"theme_color": "blue",
+	"start_url": "./index.html",
 	"description": "A Wout Soundboard",
 	"icons": [
 		{
@@ -12,10 +13,12 @@
 		},
 		{
 			"src": "./assets/ico/wountboard512.png",
+			"purpose": "maskable any",
 			"sizes": "512x512"
 		},
 		{
 			"src": "./assets/ico/wountboard192.png",
+			"purpose": "maskable any",
 			"sizes": "192x192"
 		}
 	]
