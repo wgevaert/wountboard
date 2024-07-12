@@ -3,7 +3,7 @@
 	"short_name": "Wountboard",
 	"display": "standalone",
 	"background_color": "black",
-	"theme_color": "blue",
+	"theme_color": "darkblue",
 	"start_url": "./index.html",
 	"description": "A Wout Soundboard",
 	"icons": [
